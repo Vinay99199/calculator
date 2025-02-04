@@ -1,0 +1,117 @@
+body { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    flex-direction: column;
+}
+h1,p{
+    color: #f9f9f9;
+    text-transform: uppercase;
+    font-size: large;
+}
+.calculator {
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+.display {
+    width: 100%;
+    height: 70px;
+    font-size: 2em;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    background: #eee;
+    border-radius: 5px;
+    outline: none;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+button {
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    background: #f1f1f1;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+button:hover {
+    background: #d1d1d1;
+    transform: scale(1.1);
+}
+.operator {
+    background: #ff9800;
+    color: white;
+}
+.operator:hover {
+    background: #e68900;
+    transform: scale(1.1);
+}
+.special {
+    background: #d32f2f;
+    color: white;
+}
+.special:hover {
+    background: #b71c1c;
+    transform: scale(1.1);
+}
+.history {
+    margin-top: 20px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 0.9em;
+    color: #333;
+    border: 1px solid #ddd;
+}
+.history div {
+    margin-bottom: 8px;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.history button {
+    background: #d32f2f;
+    color: white;
+    font-size: 1em;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    transition: 0.2s;
+}
+.history button:hover {
+    background: #b71c1c;
+}
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.header p {
+    margin: 5px 0;
+    font-size: 16px;
+}

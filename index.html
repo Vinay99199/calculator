@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1> Vinay's Scientific Calculator </h1>
+        <p>Project: Advanced Calculator with History </p>
+    </div>
+
+    <div class="calculator">
+        <!-- Content-Editable Div for Display -->
+        <div class="display" id="display" contenteditable="true" oninput="saveToUndo()"></div>
+
+        <div class="buttons">
+            <button onclick="clearDisplay()" class="special">C</button>
+            <button onclick="deleteLast()" class="special">⌫</button>
+            <button onclick="appendValue('(')">(</button>
+            <button onclick="appendValue(')')">)</button>
+            <button onclick="appendValue('%')" class="operator">mod</button>
+            <button onclick="appendValue('Math.pow(')">xʸ</button>
+            <button onclick="appendValue('Math.sqrt(')">√</button>
+            <button onclick="appendValue('Math.PI')">π</button>
+            <button onclick="appendValue('Math.E')">e</button>
+            <button onclick="appendValue('Math.log(')">ln</button>
+            <button onclick="appendValue('Math.log10(')">log</button>
+            <button onclick="appendValue('Math.sin(')">sin</button>
+            <button onclick="appendValue('Math.cos(')">cos</button>
+            <button onclick="appendValue('Math.tan(')">tan</button>
+            <button onclick="appendValue('**')">^</button>
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button onclick="appendValue('/')" class="operator">÷</button>
+            <button onclick="appendValue('Math.floor(')">⌊x⌋</button>
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="appendValue('*')" class="operator">×</button>
+            <button onclick="appendValue('Math.ceil(')">⌈x⌉</button>
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button onclick="appendValue('-')" class="operator">−</button>
+            <button onclick="appendValue('factorial(')">x!</button>
+            <button onclick="appendValue('0')">0</button>
+            <button onclick="appendValue('.')">.</button>
+            <button onclick="calculateResult()" class="operator">=</button>
+            <button onclick="appendValue('+')" class="operator">+</button>
+            <button onclick="appendValue('Math.pow(2,')">2^x</button>
+        </div>
+
+        <!-- Undo/Redo Buttons -->
+        <div class="buttons">
+            <button onclick="undo()" class="special">Undo</button>
+            <button onclick="redo()" class="special">Redo</button>
+        </div>
+
+        <div class="history" id="history">
+            <h4>History</h4>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
